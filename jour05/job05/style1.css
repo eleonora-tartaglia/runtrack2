@@ -1,0 +1,21 @@
+/* Style back noir et doré */
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+body {
+    font-family: 'Alex Brush', cursive;
+    background-color: black;
+    font-size: 32px;
+}
+
+form {
+    color: #996515;
+    background-color: black;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #996515;
+    text-align: center;
+}

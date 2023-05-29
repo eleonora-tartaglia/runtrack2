@@ -1,0 +1,19 @@
+/* Style back vert anglais */
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #1B4D3E;
+    font-size: 32px;
+}
+
+form {
+    color: black;
+    background-color: #1B4D3E;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
