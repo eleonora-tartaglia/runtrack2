@@ -1,0 +1,231 @@
+/* Définition de la police personnalisée 1942 report */
+@font-face {
+    font-family: "1942 report";
+    src: url("image/1942.ttf");
+}
+
+/* Définition de la police personnalisée AA_typewriter */
+@font-face {
+    font-family: "AA_typewriter";
+    src: url("image/AA_typewriter.ttf");
+}
+
+/* Styles appliqués à l'ensemble du document */
+body {
+    font-weight: bold; /* Texte en gras */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 0; /* Suppression du padding par défaut */
+    font-family: '1942 report', sans-serif; /* Utilisation de la police personnalisée 1942 report */
+    background-color: black; /* Couleur de fond noire */
+    background-image: url("image/neige.jpg"); /* Image de fond */
+    background-repeat: no-repeat; /* Pas de répétition de l'image de fond */
+    background-size: cover; /* Couverture totale de l'image de fond */
+    background-position: center top; /* Position de l'image de fond centrée en haut */
+    background-attachment: fixed; /* Image de fond fixée lors du défilement */
+    padding-top: 50px; /* Espace en haut de la page pour la barre de navigation */
+    padding-bottom: 50px; /* Espace en bas de la page pour le footer */
+}
+
+/* Styles pour la barre de navigation */
+nav {
+    display: flex; /* Utilisation de Flexbox pour la mise en page */
+    justify-content: center; /* Centrage horizontal des éléments */
+    align-items: center; /* Centrage vertical des éléments */
+    position: sticky; /* La barre de navigation reste fixée en haut lors du défilement */
+    top: 0; /* Position en haut de la page */
+    width: 100%; /* Largeur totale de la barre de navigation */
+    height: 100px; /* Hauteur de la barre de navigation */
+}
+
+/* Styles pour la liste des liens de la barre de navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none; /* Supprime les puces de la liste */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour chaque élément de la liste des liens */
+nav ul li {
+    margin: 0 50px; /* Marge autour de chaque élément de la liste */
+}
+
+/* Styles pour les liens de la barre de navigation */
+
+nav ul li a {
+    display: block; /* Convertit le lien en élément de bloc pour occuper tout l'espace disponible */
+    padding: 30px 30px; /* Espace intérieur des liens */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+    color: black; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    font-size: 18px; /* Taille de la police */
+    font-family: '1942 report', sans-serif; /* Police personnalisée */
+    text-align: center; /* Centrage horizontal du texte */
+    border: 1px solid black; /* Bordure autour des liens */
+    border-radius: 20px; /* Coins arrondis */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animation de transition pour le survol */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    text-shadow: 0 0 5px #E2DCBB;
+}
+
+/* Styles pour les liens de la barre de navigation lorsqu'ils sont survolés */
+nav ul li a:hover {
+    background-color: #3E624C; /* Couleur de fond au survol */
+    color: black; /* Changement de couleur du texte au survol */
+}
+
+/* Styles pour la section supérieure du document */
+.top-section {
+    height: 20vh; /* Hauteur de la section équivalente à 20% de la hauteur de la fenêtre */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 0; /* Suppression du padding par défaut */
+}
+
+/* Styles pour le titre de la section du formulaire */
+.form-container .title {
+    color: black; /* Couleur du texte */
+    font-family: 'AA_typewriter', sans-serif; /* Utilisation de la police personnalisée AA_typewriter */
+    text-align: center; /* Centrage horizontal du titre */
+    font-size: 25px; /* Taille de la police du titre */
+    margin-top: 0; /* Suppression de la marge supérieure du titre */
+    margin-bottom: 20px; /* Marge en bas du titre */
+    text-shadow: 0 0 5px #E2DCBB; /* Ombre portée du texte */
+}
+
+/* Styles pour le conteneur du formulaire */
+.form-container {
+    display: flex; /* Utilisation de Flexbox pour la mise en page */
+    justify-content: space-between; /* Espacement égal entre les éléments à l'intérieur */
+    align-items: center; /* Centrage vertical des éléments à l'intérieur */
+    position: relative; /* Position relative pour les éléments positionnés absolument */
+    max-width: 80%; /* Largeur maximale du conteneur à 80% */
+    margin: 0 auto; /* Centrage horizontal du conteneur */
+    gap: 30px; /* Espace de 30px entre les éléments enfants */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans la taille totale */
+    padding: 20px; /* Padding à l'intérieur du conteneur */
+    top: 40%; /* Position verticale du conteneur */
+}
+
+/* Styles pour les boîtes de contact et d'informations */
+.form-container .contact-box, .form-container .info-box {
+    text-shadow: 0 0 5px #E2DCBB; /* Ombre portée du texte */
+    color: black; /* Couleur du texte */
+    font-family: 'AA_typewriter', sans-serif; /* Utilisation de la police personnalisée AA_typewriter */
+    flex: 1; /* Chaque boîte occupe un espace égal */
+    margin: 0 20px; /* Marge de 20px à gauche et à droite */
+    margin-top: 50px; /* Marge en haut des boîtes */
+    border: 1px solid black; /* Bordure noire autour des boîtes */
+    border-radius: 20px; /* Bords arrondis pour les boîtes */
+    width: auto; /* Largeur automatique des boîtes */
+    max-width: 60%; /* Largeur maximale des boîtes à 60% */
+    display: flex; /* Utilisation de Flexbox pour la mise en page */
+    align-items: center; /* Centrage vertical des éléments dans les boîtes */
+    justify-content: center; /* Centrage horizontal des éléments dans les boîtes */
+    text-align: center; /* Centrage horizontal du texte dans les boîtes */
+    flex-direction: column; /* Disposition des éléments en colonne */
+    font-size: 25px; /* Taille de la police */
+    padding: 20px; /* Padding à l'intérieur des boîtes */
+    backdrop-filter: blur(8px); /* Flou derrière les boîtes */
+    -webkit-backdrop-filter: blur(8px); /* Flou derrière les boîtes pour Safari et Chrome */
+}
+
+/* Styles pour les liens dans la boîte d'informations */
+.info-box a {
+    color: black; /* Couleur des liens */
+    text-shadow: 0 0 5px #E2DCBB;
+}
+
+/* Styles pour la zone de texte du formulaire */
+textarea {
+    border-radius: 5px; /* Bords arrondis */
+    border: solid 1px black; /* Bordure noire */
+    padding: 8px 12px; /* Padding à l'intérieur */
+    display: block; /* Affichage en bloc */
+    margin-top: 8px; /* Marge en haut */
+    margin-bottom: 20px; /* Marge en bas */
+    width: 100%; /* Largeur totale */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans la taille totale */
+    font-size: 14px; /* Taille de la police */
+    background-color: rgba(0, 0, 0, .1); /* Couleur de fond semi-transparente */
+    color: black; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Styles pour les champs de texte du formulaire */
+.contact-box input[type="text"],
+.contact-box input[type="message"] {
+    border-radius: 5px; /* Bords arrondis */
+    border: solid 1px black; /* Bordure noire */
+    padding: 8px 12px; /* Padding à l'intérieur */
+    display: block; /* Affichage en bloc */
+    margin-top: 8px; /* Marge en haut */
+    margin-bottom: 20px; /* Marge en bas */
+    width: 100%; /* Largeur totale */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans la taille totale */
+    font-size: 14px; /* Taille de la police */
+    background-color: rgba(0, 0, 0, .1); /* Couleur de fond semi-transparente */
+    color: black; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Styles pour le bouton d'envoi du formulaire */
+.contact-box input[type="submit"] {
+    background-color: #3e624c7a; /* Couleur de fond noire */
+    color: black; /* Couleur du texte */
+    text-shadow: 0 0 5px #E2DCBB;
+    border-radius: 30px; /* Bords arrondis */
+    padding: 10px 20px; /* Padding à l'intérieur */
+    text-align: center; /* Centrage horizontal */
+    text-decoration: none; /* Suppression du soulignement */
+    display: inline-block; /* Affichage en ligne */
+    font-size: 18px; /* Taille de la police */
+    margin: 4px auto; /* Marge automatique */
+    cursor: pointer; /* Curseur pointer */
+    border: none; /* Suppression de la bordure */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans la taille totale */
+}
+
+/* Styles pour la section inférieure du document */
+.bottom-section {
+    height: 20vh; /* Hauteur de la section équivalente à 20% de la hauteur de la fenêtre */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 0; /* Suppression du padding par défaut */
+}
+
+/* Styles pour le pied de page */
+footer {
+    color: #E2DCBB; /* Couleur du texte */
+    font-family: 'AA_typewriter', sans-serif; /* Utilisation de la police personnalisée AA_typewriter */
+    position: relative; /* Position relative pour les éléments positionnés absolument */
+    bottom: 0; /* Position en bas de la page */
+    font-size: bold; /* Texte en gras */
+    text-align: center; /* Centrage horizontal du texte */
+    display: flex; /* Utilisation de Flexbox pour la mise en page */
+    justify-content: center; /* Centrage horizontal des éléments */
+    align-items: center; /* Centrage vertical des éléments */
+}
+
+/* Styles pour le contenu du pied de page */
+.footer-content {
+    display: flex; /* Utilisation de flexbox pour la mise en page */
+    flex-wrap: nowrap; /* Les éléments restent sur la même ligne, même sur les petits écrans */
+    border: 1px solid black; /* Bordure du bouton */
+    border-radius: 20px; /* Bords arrondis */
+    height: 100px;
+    align-items: center; /* Centrage horizontal des éléments */
+    justify-content: space-evenly; /* Centrage vertical des éléments */
+    background-color: rgba(0, 0, 0, 0.1); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    color: #E2DCBB;
+}
+
+/* Styles pour le logo dans le pied de page */
+.footer-logo {
+    width: 60px; /* Largeur fixe pour le logo */
+    height: auto; /* La hauteur est automatiquement ajustée pour maintenir les proportions de l'image */
+    border-radius: 10px; /* Bords arrondis de l'image */
+}

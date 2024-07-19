@@ -1,0 +1,225 @@
+/* Importation de la police personnalisée */
+@font-face {
+    font-family: "1942 report";
+    src: url("image/1942.ttf"); /* Chemin vers le fichier de police */
+}
+
+@font-face {
+    font-family: "AA_typewriter";
+    src: url("image/AA_typewriter.ttf"); /* Chemin vers le fichier de police */
+}
+
+/* Styles appliqués à l'ensemble du document */
+body {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-family: 'AA_typewriter', sans-serif; /* Utilisation de la police personnalisée */
+    background-color: rgb(3, 0, 0); /* Définition du fond en noir */
+    background-image: url("image/fumee.jpg"); /* Image de fond */
+    background-repeat: no-repeat; /* L'image de fond ne se répète pas */
+    background-size: cover; /* L'image de fond couvre toute la surface */
+    background-attachment: fixed; /* L'image de fond reste fixe lors du défilement */
+    padding-top: 50px; /* Espace en haut pour la barre de navigation */
+    padding-bottom: 50px; /* Espace en bas du footer */
+}
+
+
+/* Styles pour la barre de navigation */
+nav {
+    display: flex;
+    justify-content: center; /* Espacement égal entre les éléments à gauche et à droite */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    backdrop-filter: blur(10px); /* Effet de flou pour un arrière-plan plus esthétique */
+    z-index: 1000; /* Assure que la barre de navigation est au-dessus du contenu */
+}
+
+/* Plus de styles pour la barre de navigation */
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none; /* Supprime les puces de la liste */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour chaque élément de la liste */
+nav ul li {
+    margin: 0 50px; /* Marge autour de chaque élément de la liste */
+}
+
+/* Styles pour les liens de la barre de navigation */
+nav ul li a {
+    display: block; /* Convertit le lien en élément de bloc pour occuper tout l'espace disponible */
+    padding: 30px 30px; /* Espace intérieur des liens */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+    color: black; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    font-size: 18px; /* Taille de la police */
+    font-family: '1942 report', sans-serif; /* Police personnalisée */
+    text-align: center; /* Centrage horizontal du texte */
+    border: 1px solid black; /* Bordure autour des liens */
+    border-radius: 20px; /* Coins arrondis */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animation de transition pour le survol */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    text-shadow: 0 0 5px #E2DCBB;
+}
+  
+/* Styles pour les liens de la barre de navigation lorsqu'ils sont survolés */
+nav ul li a:hover {
+    background-color: #3E624C; /* Changement de couleur de fond lors du survol */
+    color: black; /* Changement de couleur du texte lors du survol */
+}
+
+/* Styles pour la section supérieure du document */
+.top-section {
+    height: 15em; /* Hauteur de la section équivalente à 20% de la hauteur de la fenêtre de visualisation */
+    margin: 0; /* Pas de marges */
+    padding: 0; /* Pas de padding */
+}
+
+/* Styles spécifiques pour différentes boîtes d'informations */
+.info-box2, .info-box3, .info-box4, .info-box5, .info-box6 {
+    color: black; /* Couleur du texte */
+    font-family: 'AA_typewriter', sans-serif; /* Utilisation de la police personnalisée */
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 50%; /* Changer la largeur en pourcentage pour la rendre responsive */
+    max-width: 80%; /* Largeur maximale pour empêcher les boîtes d'être trop grandes sur les grands écrans */
+    height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 25px;
+    padding: 20px; /* Ajouter du padding pour créer de l'espace autour du contenu */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    text-shadow: 0 0 5px #E2DCBB;
+}
+
+/* Styles spécifiques pour la première boîte d'information */
+.info-box1 {
+    font-size: 2em; /* Taille du texte */
+    font-family: '1942 report', sans-serif; /* Utilisation de la police personnalisée */
+    color: black; /* Couleur du texte */
+}
+
+/* Styles pour le conteneur de boîtes d'informations */
+.box-container {
+    display: flex; 
+    flex-direction: column; /* Organiser les boîtes en colonne */
+    align-items: center; /* Centrer les boîtes horizontalement */
+    justify-content: center; /* Centrer les boîtes verticalement */
+    position: relative;
+    gap: 30px; /* Espace entre les boîtes */
+    top: 30px;
+}  
+
+/* Ajoutez ces styles pour l'effet glitch */
+
+@keyframes glitch-skew {
+    0% { transform: skew(5deg); }
+    100% { transform: skew(-5deg); }
+}
+
+.glitch {
+    position: relative;
+    color: black;
+    font-size: 2em;
+    letter-spacing: .02em;
+    animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+  
+.glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+  
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #2f8045;
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+  
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #3E624C;
+    animation: glitch-anim2 1.5s infinite linear alternate-reverse;
+}
+  
+@keyframes glitch-anim {
+    2%,64% {
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60% {
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62% {
+      transform: translate(0,0) skew(5deg);
+    }
+}
+  
+@keyframes glitch-anim2 {
+    2%,64% {
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60% {
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62% {
+      transform: translate(13px,0) skew(-13deg);
+    }
+}
+
+/* Styles pour la section inférieure du document */
+.bottom-section {
+    height: 20vh; /* Hauteur de la section équivalente à 20% de la hauteur de la fenêtre de visualisation */
+    margin: 0; /* Pas de marges */
+    padding: 0; /* Pas de padding */
+}
+
+/* Styles pour le pied de page */
+footer {
+    position: relative; /* Le pied de page reste fixe lors du défilement de la page */
+    bottom: 0; /* Position en bas de la page */
+    font-size: bold; /* Mise en gras du texte */
+    text-align: center; /* Centrage horizontal du texte */
+    display: flex; /* Utilisation de flexbox pour la mise en page */
+    justify-content: center; /* Centrage horizontal des éléments */
+    align-items: center; /* Centrage vertical des éléments */
+}
+
+/* Styles pour le contenu du pied de page */
+.footer-content {
+    display: flex; /* Utilisation de flexbox pour la mise en page */
+    flex-wrap: nowrap; /* Les éléments restent sur la même ligne, même sur les petits écrans */
+    border: 1px solid black; /* Bordure du bouton */
+    border-radius: 20px; /* Bords arrondis */
+    height: 100px;
+    align-items: center; /* Centrage horizontal des éléments */
+    justify-content: space-evenly; /* Centrage vertical des éléments */
+    background-color: rgba(0, 0, 0, 0.1); /* Couleur de fond semi-transparente */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    color: #E2DCBB;
+}
+
+/* Styles pour le logo dans le pied de page */
+.footer-logo {
+    width: 60px; /* Largeur fixe pour le logo */
+    height: auto; /* La hauteur est automatiquement ajustée pour maintenir les proportions de l'image */
+    border-radius: 10px; /* Bords arrondis de l'image */
+}
