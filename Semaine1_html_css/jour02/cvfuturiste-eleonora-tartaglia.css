@@ -1,0 +1,250 @@
+body {
+    background-image: url("image/vague.jpg"); /* Image de fond */
+    background-repeat: no-repeat; /* L'image de fond ne se répète pas */
+    background-size: cover; /* L'image de fond couvre toute la surface */
+    background-position: center top; /* Position de l'image de fond */
+    background-attachment: fixed; /* L'image de fond reste fixe lors du défilement */
+    font-family: 'Stardos Stencil'; /* Définit la police de caractères pour le corps de la page à Arial, et sans-serif en police de remplacement */
+    background-color: black; /* Définition du fond en noir */
+    border: 6px double black;
+    height: 97vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex; /* Applique un affichage flex pour un alignement et une distribution flexibles des éléments enfants */
+    justify-content: space-evenly; /* Répartit les éléments enfants avec un espace égal entre eux */
+    height: 100vh; /* Fixe la hauteur du conteneur à 100% de la hauteur de la fenêtre de visualisation */
+    padding: 2vh; /* Ajoute un rembourrage autour du conteneur */
+    margin: 2vh;
+}
+
+.column {
+    margin: 2%; /* Ajoute une marge autour de chaque colonne */
+    height: 80%; /* Fixe la hauteur de chaque colonne à 90% de leur conteneur parent */
+}
+
+.column-1 {
+    flex-basis: 45%; /* Fixe la largeur de base de la colonne à 45% du conteneur parent */
+    display: flex; /* Applique un affichage flex pour un alignement et une distribution flexibles des éléments enfants */
+    flex-direction: column; /* Fixe la direction principale dans laquelle les éléments flexibles sont placés dans la colonne */
+    align-items: center; /* Centre les éléments enfants horizontalement */
+    justify-content: center; /* Centre les éléments enfants verticalement */
+}
+
+.column-2 {
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ajouté ici : Centre les vidéos horizontalement */
+    justify-content: center; /* Ajouté ici : Centre les vidéos verticalement */
+}
+
+.column-3 {
+    flex-basis: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ajouté ici : Centre les vidéos horizontalement */
+    justify-content: center; /* Ajouté ici : Centre les vidéos verticalement */
+}
+
+.photo {
+    width: 20vh; /* Changez la valeur en fonction de la taille souhaitée */
+    height: auto; /* Changez la valeur en fonction de la taille souhaitée */
+}
+
+.box {
+    background-color: rgba(19, 10, 2, 0.321); /* Définit la couleur d'arrière-plan de la boîte */
+    padding: 10px; /* Ajoute un rembourrage à la boîte */
+    margin: 4vw 0; /* Ceci appliquera une marge de 20px en haut et en bas de chaque boîte */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ajouté ici : Centre les vidéos horizontalement */
+    justify-content: center; /* Ajouté ici : Centre les vidéos verticalement */
+}
+
+.localisation-video {
+    width: 100%; /* Fixe la largeur de la vidéo de localisation à 100% de son conteneur parent */
+    height: 100%; /* Fixe la hauteur de la vidéo de localisation à 100% de son conteneur parent */
+    object-fit: cover; /* Permet de maintenir les proportions de la vidéo lors du redimensionnement */
+}
+
+.modal {
+    display: none; /* Cache le modal par défaut */
+    position: fixed; /* Fixe la position du modal pour qu'il reste en place lors du défilement */
+    z-index: 1; /* Place le modal au-dessus des autres éléments */
+    padding-top: 2vh; /* Définit la position du modal */
+    left: 0; /* Positionne le modal à gauche de la fenêtre/du cadre */
+    top: 0; /* Positionne le modal en haut de la fenêtre/du cadre */
+    width: 100%; /* Fixe la largeur du modal à 100% de la largeur de la fenêtre/du cadre */
+    height: 100%; /* Fixe la hauteur du modal à 100% de la hauteur de la fenêtre/du cadre */
+    overflow: auto; /* Permet le défilement si nécessaire */
+    overflow-y: auto;
+    -webkit-backdrop-filter: blur(10px); /* Pour Safari */
+    backdrop-filter: blur(10px); /* Pour les autres navigateurs */
+
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: rgba(19, 10, 2, 0.321); /* Couleur d'arrière-plan du contenu du modal */
+    color: #C3A780;
+    margin: auto; /* Centre le contenu du modal */
+    padding: 20px; /* Ajoute un rembourrage autour du contenu du modal */
+    border: 10px solid black; /* Ajoute une bordure autour du contenu du modal */
+    width: 80%; /* Fixe la largeur du contenu du modal à 80% de son conteneur parent */
+    font-family: 'Stardos Stencil'; /* Définit la police du texte */
+    font-weight: bold; /* Rend le texte en gras */
+    text-align: center; /* Centre le texte */
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+    overflow: auto; /* Permet le défilement si nécessaire */
+    overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse la hauteur de la boîte */
+}
+
+/* The Close Button */
+.close {
+    color: #C3A780; /* Couleur du bouton de fermeture */
+    float: right; /* Positionne le bouton de fermeture sur le côté droit du conteneur */
+    font-size: 28px; /* Taille de la police du bouton de fermeture */
+    font-weight: bold; /* Epaisseur de la police du bouton de fermeture */
+}
+
+.close:hover,
+.close:focus {
+    color: #000; /* Couleur du bouton de fermeture lorsqu'il est survolé ou ciblé */
+    text-decoration: none; /* Supprime toute décoration du texte du bouton de fermeture lorsqu'il est survolé ou ciblé */
+    cursor: pointer; /* Change le curseur en pointer lorsqu'il survole le bouton de fermeture */
+}
+
+.btn {
+    font-size: 1em; /* La taille du texte est relative à la taille de la police de l'élément parent */
+    color: black; /* Couleur du texte du bouton */
+    background-color: #c3a780b0; /* Couleur d'arrière-plan du bouton */
+    font-family: 'Stardos Stencil';
+    padding: 1em; /* Rembourrage à l'intérieur du bouton, relatif à la taille de la police du bouton lui-même */
+    border: none; /* Retire la bordure par défaut des boutons */
+    border-radius: 5px; /* Arrondit les coins du bouton */
+    border: 5px double black;
+    transition: background-color 0.3s; /* Ajoute une transition lors du changement de la couleur d'arrière-plan du bouton */
+    text-transform: uppercase; /* Transforme le texte en majuscules */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ajouté ici : Centre les vidéos horizontalement */
+    justify-content: center; /* Ajouté ici : Centre les vidéos verticalement */
+    width: 300px; /* Ajouté ici : donne la même taille à chaque bouton */
+}
+
+.btn.column-2 {
+    margin-bottom: 20px;
+}
+
+.btn:hover {
+    background-color: rgba(195, 167, 128, 0.5); /* Change la couleur d'arrière-plan du bouton lorsqu'il est survolé */
+}
+
+.terminal {
+    background-color: #c3a780b0; /* Couleur de fond avec transparence */
+    color: black; /* Couleur du texte noire */
+    border: 6px double black; /* Bordure double noire de 6px */
+    font-family: 'Stardos Stencil'; /* Police de caractères utilisée */
+    font-size: 16px; /* Taille de la police de caractères */
+    padding: 10px; /* Espace intérieur de 10px */
+    position: relative; /* Positionnement relatif par rapport à son conteneur */
+    margin-top: 30%; /* Marge supérieure de 30% */
+}
+
+.terminal p {
+    display: inline-block; /* Affichage en ligne avec possibilité de définir la taille */
+}
+
+#cursor1, #cursor2 {
+    display: inline-block; /* Affichage en ligne avec possibilité de définir la taille */
+    animation: blink 1s infinite; /* Animation blink d'une durée de 1 seconde répétée indéfiniment */
+}
+
+@keyframes blink {
+    0% {
+      opacity: 1; /* Opacité à 100% au début de l'animation */
+    }
+    50% {
+      opacity: 0; /* Opacité à 0% à la moitié de l'animation */
+    }
+    100% {
+      opacity: 1; /* Opacité à 100% à la fin de l'animation */
+    }
+}
+
+@media screen and (max-width: 768px) {  
+    body {
+        height: 97vh; /* Hauteur du corps de la page à 97% de la hauteur de la fenêtre */
+        overflow: hidden; /* Cache le contenu qui dépasse de la fenêtre */
+    }
+
+    .container {
+        padding: 1vh; /* Padding intérieur de 1% de la hauteur de la fenêtre */
+        margin: 1vh; /* Marge extérieure de 1% de la hauteur de la fenêtre */
+        flex-wrap: wrap; /* Permet au conteneur flex de se répartir sur plusieurs lignes */
+        height: 87vh; /* Hauteur du conteneur à 87% de la hauteur de la fenêtre */
+    }
+
+    .column {
+        margin: 1%; /* Marge extérieure de 1% */
+        height: 90%; /* Hauteur des colonnes à 90% de la hauteur de la fenêtre */
+    }
+
+    .column-1 {
+        order: 2; /* Place la colonne 1 après la colonne 3 */
+        width: 30%; /* Largeur de la colonne à 30% */
+        height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    }
+
+    .column-2 {
+        order: 3; /* Place la colonne 2 après la colonne 1 */
+        width: 30%; /* Largeur de la colonne à 30% */
+        height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    }
+
+    .column-3 {
+        flex-direction: row; /* Aligne les boîtes en ligne dans la colonne 3 */
+        order: 1; /* Place la colonne 3 en premier */
+        max-width: 100%; /* Largeur maximale de 100% */
+        height: 20%; /* Hauteur de la colonne à 20% de la hauteur de la fenêtre */
+        align-items: center; /* Centre les éléments horizontalement */
+        justify-content: space-between; /* Espace entre les éléments verticalement */
+    }
+
+    .photo {
+        width: 12vh; /* Largeur des photos à 12% de la hauteur de la fenêtre */
+        margin: 0 5px; /* Marge de 5px à gauche et à droite des photos */
+    }
+
+    .box {
+        padding: 5px; /* Espace intérieur de 5px */
+        margin: 2vw 0; /* Marge verticale de 2% de la largeur de la fenêtre */
+        height: auto; /* Hauteur automatique pour s'adapter au contenu */
+        background-color: rgba(19, 10, 2, 0); /* Couleur de fond transparente */
+    }
+
+    .modal-content {
+        padding: 10px; /* Espace intérieur de 10px */
+        width: 90%; /* Largeur de 90% */
+    }
+
+    .close {
+        font-size: 20px; /* Taille de la police de 20px */
+    }
+
+    .btn {
+        font-size: 0.5em; /* Taille de la police de 0.5em */
+        padding: 0.5em; /* Padding intérieur de 0.5em */
+        width: 100px; /* Largeur de 100px */
+        height: auto; /* Hauteur automatique pour s'adapter au contenu */
+    }
+
+    .terminal {
+        width: 50px; /* Largeur de 50px */
+        height: auto; /* Hauteur automatique pour s'adapter au contenu */
+        font-size: 10px; /* Taille de la police de 10px */
+        padding: 5px; /* Espace intérieur de 5px */
+    }
+}
