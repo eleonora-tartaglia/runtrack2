@@ -1,0 +1,80 @@
+html, body
+{
+margin:0;
+padding: 0;
+}
+body
+{
+  background: url(https://wallpaper.forfun.com/fetch/9d/9dea570cb2205db50e401fb2e762da51.jpeg) no-repeat center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+}
+.slider-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    height: 600px;
+    overflow: hidden;
+}
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50px;
+    margin: 0 0.2em 1em;
+}
+.menu label:hover,.menu label:focus {
+    background: #1c87c9;
+}
+.slide-input{
+    opacity: 0;
+}
+.Agent {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition: left 0s 0.75s;
+}
+[id^="slide"]:checked + .Agent {
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+}
+
+a {
+    color: inherit; /* Utilise la couleur du parent */
+    text-decoration: none; /* Enlève le soulignement */
+}
+
+a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+footer {
+    text-align: center;
+    color:lavender;
+    font-size: 18px;
+}

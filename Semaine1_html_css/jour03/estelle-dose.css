@@ -1,0 +1,82 @@
+body{
+	width: 100%;
+	background: #ffffff;
+	margin : 0 auto;
+	text-align: center;
+    font-family: Gill Sans MT Regular;
+    }
+
+#entete{
+        width: 100%;
+        background: #efcbca;
+        margin: 0;
+        height: auto;
+        color: #000000;
+        font-size: 4.5em;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }    
+
+    .section{
+        width: 25%;
+        background: #efcbca;
+        padding: 2%;
+        margin: 1%;
+        color: #fff;
+    }
+
+    .Estelle{
+        width: 100%;
+        color: #000000;
+        margin: 2% auto;
+        background: #ffffff;
+        padding: 1%;
+        text-align: justify;
+    }
+
+    .image-container, .image-container2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    .image-container img {
+        max-width: 85%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .image-container2 img {
+        max-width: 70%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+
+    .h2{
+        font-size: 1.6em;
+        color: #ea8895;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .h1{
+        font-size: 1.25em;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .p{
+        font-size: 1.1em;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    a {
+        /* text-decoration: none; */
+        color: #000000;
+    }

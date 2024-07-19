@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Dégradé de vert foncé vers transparent */
+    background-image: radial-gradient(circle, #131f10, #203120, #2e4431, #3d5943, #4b6e57);
+    color: #8fc991; /* Couleur du texte pour le contraste */
+    text-align: center;
+}
+
+header {
+    padding: 1em 0;
+    background-color:#75a376af;
+    border: 1rem solid black;
+}
+
+section {
+    margin: 2em auto;
+    width: 80%;
+    max-width: 800px;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+    color: #203120;
+}
+
+h2, h4 {
+    color: #8fc991; /* Couleur verte pour les titres, rappelant les écrans de terminal */
+}
+
+a {
+    color: #8fc991; /* Couleur verte pour les liens */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    border-radius: 8px;
+}
