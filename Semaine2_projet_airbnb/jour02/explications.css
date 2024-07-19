@@ -1,0 +1,223 @@
+/* Importation de la police personnalisée */
+@font-face {
+    font-family: 'Police Airbnb';  /* Nom de la police à utiliser */
+    src: url('images/AirbnbCereal_W_Bk.otf') format('opentype');  /* Chemin vers le fichier de police et son format */
+    font-weight: normal;  /* Poids de la police */
+    font-style: normal;  /* Style de la police */
+}
+
+/* Styles globaux */
+html {
+    background-color: black;  /* Couleur de fond de la page HTML */
+}
+
+body {
+    padding: 0;  /* Pas de padding pour le corps de la page */
+    margin: 10px;  /* Marge autour du corps de la page */
+    background-color: #f8f8f8;  /* Couleur de fond du corps de la page */
+    font-family: 'Police Airbnb', Arial, sans-serif;  /* Police utilisée pour le texte du corps de la page */
+}
+
+/* Styles pour l'en-tête */
+header {
+    padding: 1rem;  /* Padding interne de l'en-tête */
+}
+
+/* Styles pour la barre de navigation */
+.bar-nav {
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    justify-content: space-between;  /* Distribution de l'espace entre les éléments */
+    align-items: center;  /* Alignement vertical au centre */
+}
+
+.bar-nav ul {
+    list-style-type: none;  /* Suppression des puces de liste */
+    margin: 0;  /* Pas de marge pour les listes */
+    padding: 0;  /* Pas de padding pour les listes */
+    display: flex;  /* Utilisation de Flexbox pour la mise en page des listes */
+    align-items: center;  /* Alignement vertical au centre des éléments de la liste */
+    font-size: 15px;  /* Taille de la police des éléments de la liste */
+}
+
+.bar-nav ul.lien-gauche {
+    flex: 1;  /* Prend toute la place disponible à gauche */
+    justify-content: flex-start;  /* Alignement à gauche des éléments */
+    margin-left: 30px;  /* Marge à gauche */
+}
+
+.bar-nav ul.lien-milieu {
+    flex: 1;  /* Prend toute la place disponible au centre */
+    justify-content: center;  /* Centrage des éléments */
+}
+
+.bar-nav ul.lien-droite {
+    flex: 1;  /* Prend toute la place disponible à droite */
+    justify-content: flex-end;  /* Alignement à droite des éléments */
+    margin-right: 30px;  /* Marge à droite */
+}
+
+.bar-nav ul li {
+    margin: 0 15px;  /* Marge entre les éléments de la liste */
+}
+
+.bar-nav ul li a {
+    color: black;  /* Couleur du texte des liens */
+    text-decoration: none;  /* Suppression de la décoration de texte (soulignement) */
+}
+
+/* Séparateurs */
+.separator1 {
+    width: 100%;  /* Largeur maximale */
+    height: 1px;  /* Hauteur de 1 pixel */
+    background-color: #7e7e7e3e;  /* Couleur de fond du séparateur */
+    margin-top: 20px;  /* Marge en haut */
+    margin-bottom: 20px;  /* Marge en bas */
+}
+
+/* Styles pour la barre de recherche */
+.bar-recherche {
+    background-color: #ffffff;  /* Couleur de fond de la barre de recherche */
+    padding: 1rem;  /* Padding interne */
+    border-radius: 50px;  /* Bordure arrondie */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Ombre de la barre de recherche */
+    width: 60%;  /* Largeur de la barre de recherche */
+    margin: 1rem auto;  /* Centre la barre de recherche horizontalement avec une marge */
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    justify-content: center;  /* Centrage des éléments */
+    align-items: center;  /* Alignement vertical au centre */
+}
+
+.search-form {
+    display: flex;  /* Utilisation de Flexbox pour la mise en page du formulaire */
+    justify-content: center;  /* Centrage des éléments */
+    align-items: center;  /* Alignement vertical au centre */
+    border-radius: 50px;  /* Bordure arrondie */
+}
+
+.input-group {
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    flex-direction: column;  /* Disposition des éléments en colonne */
+}
+
+.input-group label {
+    font-size: 15px;  /* Taille de la police du label */
+}
+
+.input-group input {
+    border: none;  /* Suppression de la bordure */
+    outline: none;  /* Suppression du contour */
+    padding: 0.5rem;  /* Padding interne */
+    width: 200px;  /* Largeur de l'input */
+    font-size: 15px;  /* Taille de la police de l'input */
+}
+
+.search-form button {
+    border: none;  /* Suppression de la bordure */
+    width: 40px;  /* Largeur du bouton */
+    height: 40px;  /* Hauteur du bouton */
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    justify-content: center;  /* Centrage des éléments */
+    align-items: center;  /* Alignement vertical au centre */
+    cursor: pointer;  /* Changement du curseur au survol */
+}
+
+.loupe {
+    width: 30px;  /* Largeur de l'image de la loupe */
+}
+
+.search-form a {
+    margin-left: 50%;  /* Marge à gauche pour centrer l'élément */
+}
+
+/* Styles pour les icônes */
+.bar-icone {
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    flex-direction: row;  /* Disposition des éléments en ligne */
+    justify-content: space-evenly;  /* Répartition égale de l'espace entre les éléments */
+}
+
+.icone {
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    flex-direction: column;  /* Disposition des éléments en colonne */
+    justify-items: center;  /* Centrage des éléments */
+    align-items: center;  /* Alignement vertical au centre */
+}
+
+/* Styles pour les logements */
+.vue-logement {
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    flex-wrap: wrap;  /* Retour à la ligne des éléments si nécessaire */
+    align-items: center;  /* Alignement vertical au centre */
+    justify-content: space-evenly;  /* Répartition égale de l'espace entre les éléments */
+    margin: 0 20px;  /* Marges horizontales */
+}
+
+.log {
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    flex-direction: column;  /* Disposition des éléments en colonne */
+    align-items: center;  /* Alignement vertical au centre */
+    width: 22%;  /* Largeur des éléments */
+    margin-top: 50px;  /* Marge en haut */
+    padding: 10px;  /* Padding interne */
+    position: relative;  /* Position relative pour positionner le cercle */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Ombre des éléments */
+}
+
+.picture {
+    position: relative;  /* Position relative pour positionner le cercle blanc */
+    width: 100%;  /* Largeur de l'image */
+}
+
+.picture img {
+    width: 100%;  /* Largeur de l'image */
+    height: auto;  /* Hauteur automatique pour maintenir le ratio */
+    border-radius: 25px;  /* Bordure arrondie de l'image */
+}
+
+.circle {
+    position: absolute;  /* Position absolue par rapport à .picture */
+    top: 10px;  /* Positionnement du cercle */
+    right: 10px;  /* Positionnement du cercle */
+    width: 50px;  /* Largeur du cercle */
+    height: 50px;  /* Hauteur du cercle */
+    background-color: rgba(255, 255, 255, 0.513);  /* Couleur de fond du cercle */
+    border-radius: 50%;  /* Bordure arrondie pour faire un cercle parfait */
+    border: 2px solid white;  /* Bordure blanche du cercle */
+}
+
+.texte {
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    flex-direction: column;  /* Disposition des éléments en colonne */
+    white-space: pre-line;  /* Préservation des espaces et des retours à la ligne */
+}
+
+.texte p {
+    margin: 0rem;  /* Pas de marge */
+    font-size: 15px;  /* Taille de la police */
+    white-space: pre-line;  /* Préservation des espaces et des retours à la ligne */
+}
+
+.p1 {
+    color: rgba(98, 100, 103, 0.816);  /* Couleur du texte de .p1 */
+    white-space: pre-line;  /* Préservation des espaces et des retours à la ligne */
+}
+
+/* Séparateur */
+.separator2 {
+    width: 100%;  /* Largeur maximale */
+    height: 3px;  /* Hauteur de 3 pixels */
+    background-color: #7e7e7e3d;  /* Couleur de fond du séparateur */
+    margin-top: 50px;  /* Marge en haut */
+    margin-bottom: 0px;  /* Pas de marge en bas */
+}
+
+/* Styles pour le pied de page */
+footer {
+    display: flex;  /* Utilisation de Flexbox pour la mise en page */
+    justify-content: center;  /* Centrage horizontal des éléments */
+    align-items: center;  /* Alignement vertical au centre */
+    font-size: 15px;  /* Taille de la police */
+    background-color: #b3a8a818;  /* Couleur de fond du pied de page */
+    height: auto;  /* Hauteur automatique */
+    padding: 20px;  /* Padding interne */
+}
