@@ -23,7 +23,7 @@ body {
 
 h1 {
     font-family: 'Papyrus', Arial, serif;
-    color: #f39c12;
+    color:#854504;
     margin-bottom: 20px;
 }
 
@@ -35,7 +35,7 @@ label {
 input[type="number"], select {
     background-color: #1C1F0E;
     border: 1px solid #313618;
-    color: #f39c12;
+    color: #c17b0c;
     padding: 10px;
     border-radius: 5px;
     width: calc(100% - 24px);
@@ -43,7 +43,7 @@ input[type="number"], select {
 }
 
 input[type="submit"] {
-    background-color: #975d00;
+    background-color: #854504e1;
     color: black;
     border: none;
     padding: 10px 20px;
@@ -52,7 +52,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #975d00;
+    background-color: #665D1E;
 }
 
 h2 {
