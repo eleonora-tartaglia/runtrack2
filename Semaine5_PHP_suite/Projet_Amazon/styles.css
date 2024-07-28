@@ -1,0 +1,222 @@
+/* Réinitialise les marges et les paddings par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('images/arianna.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    padding: 2rem;
+    /* text-shadow: 2px 2px 4px rgb(173, 171, 119); */
+}
+
+main h2 {
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background-color: #5b423ee4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar {
+    width: 100%;
+    color: #D8AC6F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header nav .logo img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+header nav .nav-title h1 {
+    text-align: center;
+}
+
+header nav .nav-cart img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.presentation {
+    background-color: #5b423ee4;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+
+.product {
+    background-color: #5b423ee4;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin-bottom: 1rem;
+}
+
+.product p {
+    margin-bottom: 1rem;
+}
+
+.product a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #804C44;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product a:hover {
+    background-color: #D8AC6F;
+}
+
+/* Conteneur pour les détails des produits */
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Espace entre les sections */
+    padding: 2rem;
+}
+
+.product-detail, .product-detail-2 {
+    background-color: #5b423ee4;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 45%; /* Ajuste la largeur des sections */
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(91, 66, 62, 0.9) 0%, rgba(91, 66, 62, 0.7) 100%);
+}
+
+.product-detail img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+/* Style pour le conteneur du montant total et du bouton de paiement */
+.total-container {
+    background-color: #5b423ee4;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 30%;
+    margin: 2rem auto; /* Centré horizontalement */
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Style pour les boutons */
+.button-style {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #804C44;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button-style:hover {
+    background-color: #D8AC6F;
+}
+
+.cart {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.quantity-form {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.quantity-form input[type="number"] {
+    width: 60px; /* Ajustez la largeur selon vos besoins */
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #D8AC6F;
+    color: black;
+    text-align: center;
+    outline: none;
+}
+
+/* Style pour le footer */
+footer {
+    width: 100%;
+    background-color: #5b423ee4;
+    color: #D8AC6F;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
