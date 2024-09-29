@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(128, 209, 128);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  input, select {
+    font-size: 18px;
+    padding: 12px;
+    color: rgba(11, 52, 11, 0.803);
+  }
+  

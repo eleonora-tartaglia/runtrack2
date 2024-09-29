@@ -1,0 +1,5 @@
+# Ignorer les fichiers que genere ce chenapan d'Archimède
+
+.DS_Store
+Icon\r
+

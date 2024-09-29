@@ -1,0 +1,10 @@
+body {
+    background-color: lightcoral;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  input, select {
+    font-size: 20px;
+    padding: 14px;
+    color: darkred;
+  }
